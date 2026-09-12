@@ -44,6 +44,29 @@ Run it with:
 node 04-arrays-objects/student-report.js
 ```
 
+
+## CSS Tricks & Animations
+
+The `09-css-tricks` folder contains small copy-and-run UI effects:
+
+1. **Hover Card** — lift, scale and shadow transition
+2. **Loading Dots** — staggered keyframe loader
+3. **Glassmorphism Card** — blur + transparent panel effect
+4. **Shine Button** — animated shine sweep using a pseudo-element
+5. **Animated Underline** — nav link underline transition
+6. **Floating Label Input** — modern form label interaction
+7. **Pulse Notification** — reusable online/status pulse animation
+
+Open any `index.html` file directly in a browser. Each example is intentionally kept in one file so students can inspect and modify the HTML/CSS quickly.
+
+### Practice ideas
+
+- Change animation speed and easing.
+- Replace fixed values with CSS custom properties.
+- Add `prefers-reduced-motion` support.
+- Combine the effects into a landing-page component.
+- Rebuild each effect without looking at the original.
+
 ## How to use these examples
 
 Most basic examples can run directly in Node.js:
