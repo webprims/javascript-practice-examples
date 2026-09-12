@@ -11,6 +11,7 @@ The goal is simple: learn JavaScript by writing, changing, breaking, and fixing 
 - Loops
 - Functions and arrow functions
 - Arrays and objects
+- `map`, `filter`, `reduce`, and sorting
 - DOM selection and manipulation
 - Browser events
 - Forms and validation
@@ -31,6 +32,16 @@ javascript-practice-examples/
 ├── 07-storage/
 ├── 08-async-api/
 └── mini-projects/
+```
+
+## Featured practice
+
+`04-arrays-objects/student-report.js` combines arrays, objects, `map`, `reduce`, averages, and a topper calculation in one beginner-friendly challenge.
+
+Run it with:
+
+```bash
+node 04-arrays-objects/student-report.js
 ```
 
 ## How to use these examples
