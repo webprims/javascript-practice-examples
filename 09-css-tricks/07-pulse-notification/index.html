@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pulse Notification</title>
+  <style>
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      margin: 0;
+    }
+
+    .status {
+      position: relative;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    .status::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border: 2px solid currentColor;
+      border-radius: inherit;
+      animation: pulse 1.4s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: .8; }
+      100% { transform: scale(2.4); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <span class="status" title="Online"></span>
+</body>
+</html>
