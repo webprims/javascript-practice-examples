@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Scroll progress | WebPrims</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font:18px/1.7 system-ui;color:#18304c;background:#f5f8ff}header{position:sticky;top:0;background:white;box-shadow:0 2px 12px #18304c22}header p{margin:0;padding:.7rem 1rem}.progress{height:5px;background:#d9e5fa}.progress::before{content:"";display:block;height:100%;background:#245fd2;transform:scaleX(var(--progress,0));transform-origin:left}main{max-width:42rem;padding:2rem;margin:auto}section{min-height:70vh}a:focus-visible{outline:3px solid #245fd2}
+@supports (animation-timeline: scroll()) {
+  .progress::before{transform:scaleX(0);animation:fill linear both;animation-timeline:scroll(root block)}
+  @keyframes fill{to{transform:scaleX(1)}}
+}
+@media (prefers-reduced-motion:reduce){.progress::before{animation:none;transform:scaleX(var(--progress,0))}}
+</style>
+<header><p>Reading progress · <a href="https://www.webprims.com/">WebPrims</a></p><div class="progress" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div></header>
+<main><h1>Scroll progress indicator</h1><p>Scroll down to fill the bar. CSS scroll animation runs in supporting browsers; a tiny JavaScript fallback updates the same bar and its accessible value.</p><section><h2>1. Start</h2><p>Inspect the progress pseudo-element and its transform origin.</p></section><section><h2>2. Middle</h2><p>Try resizing the viewport to see how the scroll range changes.</p></section><section><h2>3. End</h2><p>Practice: change the bar color using a CSS custom property.</p></section></main>
+<script>
+const bar=document.querySelector('.progress');
+function update(){const max=document.documentElement.scrollHeight-innerHeight;const value=max>0?Math.round(scrollY/max*100):100;bar.style.setProperty('--progress',value/100);bar.setAttribute('aria-valuenow',value)}
+addEventListener('scroll',update,{passive:true});addEventListener('resize',update);update();
+</script></html>

@@ -31,6 +31,7 @@ javascript-practice-examples/
 ├── 06-events-forms/
 ├── 07-storage/
 ├── 08-async-api/
+├── 09-css-tricks/
 └── mini-projects/
 ```
 
@@ -45,6 +46,8 @@ node 04-arrays-objects/student-report.js
 ```
 
 
+`mini-projects/command-palette/` is a keyboard-friendly search dialog using `filter`, DOM creation and event handling. Open `index.html`, press Ctrl+K (or ⌘K), and navigate results with the arrow keys.
+
 ## CSS Tricks & Animations
 
 The `09-css-tricks` folder contains small copy-and-run UI effects:
@@ -56,6 +59,8 @@ The `09-css-tricks` folder contains small copy-and-run UI effects:
 5. **Animated Underline** — nav link underline transition
 6. **Floating Label Input** — modern form label interaction
 7. **Pulse Notification** — reusable online/status pulse animation
+8. **Scroll Progress** — reading indicator with CSS scroll animation, fallback and accessible value
+9. **Orbit Animation** — rotating badge with a still reduced-motion version
 
 Open any `index.html` file directly in a browser. Each example is intentionally kept in one file so students can inspect and modify the HTML/CSS quickly.
 
